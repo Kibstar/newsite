@@ -1,0 +1,20 @@
+{% extends 'weather/base.html' %} {% load static %} {% block content %}
+<!--Content in here-->
+<div class="main-window">
+  <h1 class="search-text">
+    <span class="search-text-main">WeatherApp</span>
+    <span class="search-text-sub">search location here</span>
+  </h1>
+  <div class="search-box">
+    <form method="POST" class="search-box-form" action="#">
+      {% csrf_token %}
+      <input src="/img/search-icon.png" name="city" class="search-box-input" type="text" value="{{ request.POST.city }}"
+        placeholder="Search" />
+      <button class="search-box-button">
+        <img width="20" src="{% static 'weather/images/search-icon.png' %}" alt="search-icon" srcset="" />
+      </button>
+    </form>
+  </div>
+</div>
+
+{% endblock content %}

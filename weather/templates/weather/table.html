@@ -1,0 +1,48 @@
+{% extends 'weather/base.html' %} {% load static %} {% block content %}
+<link rel="stylesheet" href="{% static 'weather/table-styles.css' %}" />
+<!--Content in here-->
+<div class="location-header">
+  <h1>{{ city }}</h1>
+  <h2>{{ country }}</h2>
+</div>
+<form action="#" method="POST" class="pref-form">
+  {% csrf_token %}
+  <div class="preferences">
+    <div class="preferences-pref ">
+      <h6>Maximum Wind Speed:</h6>
+      <input id="max_wind" name="max_wind" value="{{ max_wind }}" type="text" class="pref-field ws" />
+      <p class="pref-units">mph</p>
+    </div>
+    <br />
+    <div class="preferences-pref">
+      <h6>Minimum Temperature:</h6>
+      <input id="min_temp" name="min_temp" value="{{ min_temp }}" type="text" class="pref-field" />
+      <p class="pref-units">°C</p>
+    </div>
+    <button class="pref-btn">Update preferences</button>
+  </div>
+</form>
+{% for i in date_list %}
+<div class="table-day">
+  <table class="table-day-table">
+    <tr class="table-day-head-row">
+      <th colspan="4" class="table-day-head tl">{{ i }}</th>
+      <th class="table-day-head tr"></th>
+    </tr>
+    {% for x in good_weather_list %}
+    {% if x.date == i %}
+    <tr class="table-day-row">
+      <td class="table-time">{{ x.tf_time }}</td>
+      <td>{{ x.temp }} °C</td>
+      <td>{{x.main}}</td>
+      <td>{{x.wind_speed}} mph</td>
+      <td>{{x.cardinal}}</td>
+    </tr>
+    {% endif %}
+    {% endfor x %}
+
+  </table>
+</div>
+
+{% endfor i %}
+{% endblock content %}

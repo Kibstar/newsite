@@ -1,0 +1,133 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,500&display=swap');
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #e5e5e5;
+}
+
+.location-header {
+  font-style: normal;
+  font-size: 45px;
+  text-align: center;
+  margin: 30px;
+}
+
+.location-header h1 {
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  display: block;
+  font-size: 70px;
+  font-weight: 500;
+}
+
+.preferences {
+  margin: 40px 5%;
+}
+
+.preferences h6 {
+  font-size: 16px;
+  display: inline-block;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.preferences-pref {
+  display: inline-block;
+  margin: 2px;
+}
+
+.pref-units {
+  display: inline;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.pref-field {
+  padding: 8px 5px;
+  margin-left: 15px;
+  font-size: 15px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 30px;
+}
+
+.ws {
+  margin-left: 19px;
+}
+
+.pref-btn {
+  display: block;
+  color: #e5e5e5;
+  border: none;
+  background-color: #4c0f69;
+  padding: 8px 120px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: 30px;
+  margin: 10px 0;
+}
+
+.table-day-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-bottom-left-radius: 10px;
+}
+
+.table-time{
+  font-weight: 500;
+  font-style: italic;
+}
+
+.table-div {
+  border-spacing: 0px;
+  margin: 0 3%;
+  width: 94%;
+}
+
+.table-day {
+  background-color: rgb(235, 235, 235);
+  text-align: center;
+  margin: 30px;
+}
+
+.table-day-head {
+  color: #4c0f69;
+  background-color: rgb(143, 228, 57);
+  height: 40px;
+  width: 100px;
+  padding-left: 15px;
+  text-align: left;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+tr{
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #f4ffee;
+}
+
+tr:nth-child(odd) {
+  background-color: #f5f5f5;
+}
+
+table-day-row td:first-child {
+}
+
+.tl {
+  border-top-left-radius: 8px;
+}
+
+.tr {
+  border-top-right-radius: 8px;
+}
