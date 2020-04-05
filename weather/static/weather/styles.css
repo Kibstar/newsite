@@ -68,8 +68,8 @@ body {
 }
 
 .nav-search-box {
-  width: 70%;
-  font-size: 15px;
+  width: 60%;
+  font-size: 12px;
   text-align: inherit;
   height: 35px;
   border-radius: 20px;
@@ -80,7 +80,7 @@ body {
 }
 
 .nav-search-btn {
-  width: 80px;
+  width: 70px;
   font-size: 14px;
   height: 35px;
   color: rgb(55, 26, 88);
@@ -145,7 +145,7 @@ body {
 }
 
 .search-box-input {
-  width: 50vh;
+  width: 40vh;
   height: 40px;
   padding-left: 20px;
   font-size: 16px;

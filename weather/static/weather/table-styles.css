@@ -111,6 +111,7 @@ body {
 
 tr{
   text-align: center;
+  font-size: 13px;
 }
 
 tr:nth-child(even) {
