@@ -1,0 +1,1 @@
+web: gunicorn flyingapp.wsgi
