@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .forms import SearchCityForm, ChangePreferenceForm
-from .models import Pref, City
+# from .forms import SearchCityForm, ChangePreferenceForm
+# from .models import Pref, City
 from .logic import main
 from django.http import response
 from django.contrib import messages
@@ -42,7 +42,7 @@ def home(request):
     #     'city_form': city_form,
     #     'title': title,
     # }
-    return render(request, 'weather/home.html', context)
+    return render(request, 'weather/home.html')  # add context
 
 
 def weather(request):
@@ -141,4 +141,4 @@ def weather(request):
     #     'good_weather_list': good_weather_list,
 
     # }
-    return render(request, 'weather/table.html', context)
+    return render(request, 'weather/table.html')  # add context
